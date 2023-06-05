@@ -1,17 +1,22 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+//index.js
+// Importing to render the react components
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+import App from './App';
+import RegistrationForm from './RegistrationForm';
+
+
+
+// App is passed as the root component to be rendered
+ReactDOM.render(<App />, 
+// selects the html elements with id root where our react application will be mounted
+document.getElementById('root'));
+
+ReactDOM.render(<RegistrationForm />, 
+// select the html elements with id register where our react app will be mounted
+document.getElementById('register')
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+
